@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication40.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    
+    <style>
+       header {
+    min-height: 50px;
+    background-color:aqua;
+   }
+#logo {
+    min-height: 60px;
+    background-color:white;
+}
+#slogan {
+    min-height: 50px;
+    background-color:white;
+   
+}
+#sosyal {
+    min-height: 50px;
+    background-color:white;
+}
+#content{
+    background-color:white;
+}
+#left {
+    min-height: 400px;
+    background-color:white;
+}
+#foot {
+    min-height: 40px;
+    background-color:white;
+            top: 0px;
+            left: 0px;
+        }
+#Label1{
+    text-align:center;
+}
+    </style>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+</head>
+<body>
+   <form id="form1" runat="server">
+       <section id="site" class="container">
+
+           <header class="row">
+               <div id="logo" class="col-md-2">
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   <asp:Image ID="Image1" runat="server" Height="72px" ImageUrl="~/im/logo.jpg" Width="102px" />
+               </div>
+               <div id="slogan" class="col-md-7">
+                   <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+               </div>
+               <div id="sosyal" class="col-md-3">
+                   <a href="tel://+905318279395">+90 531 827 93 95</a>
+                   <asp:ImageButton ID="ImageButton3" runat="server" Height="36px" ImageUrl="~/im/phone.png" OnClick="ImageButton3_Click" Width="46px" />
+               </div>
+           </header>
+
+           <section class="row">
+               <div id="left" class="col-md-2 text-center">
+                   <a href="Default.aspx">Sporun Önemi</a><br />
+                   <a href="About.aspx">Evde Spor Yapma</a><br />
+                   <a href="asdf.aspx">Kilom Normalmi?</a><br />
+                   <a href="asd.aspx">Dogru Bilinen Yanlışlar</a> <br />
+                   <a href="Contact.aspx">İLETİŞİM</a>
+               </div>
+               <div id="content" class="col-md-10">
+               <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+               </div>
+           </section>
+
+           <footer class="row">
+               <div id="foot" class="col-md-12 text-center">&nbsp;&nbsp;
+                   <asp:ImageButton ID="ImageButton1" runat="server" Height="51px" ImageUrl="~/im/iinst.jpg" OnClick="ImageButton1_Click" Width="47px" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   
+                   <asp:ImageButton ID="ImageButton2" runat="server" Height="51px" ImageUrl="~/im/face.jpg" Width="47px" OnClick="ImageButton2_Click" />
+               </div>
+           </footer>
+       </section>
+   </form>
+</body>
+</html>
